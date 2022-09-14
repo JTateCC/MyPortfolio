@@ -1,1 +1,0 @@
-django_secret_key = "@gn-v!40cujvohu#sirs64!t1pni)*0b*-wy)051(8=(g=i3=o"
