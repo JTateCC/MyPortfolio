@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = ps.django_secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1',
-                 'dresdencoding.pythonanywhere.com']
+                 'jtateCC2.pythonanywhere.com']
 
 
 # Application definition
@@ -80,10 +80,14 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'jtateCC2$default',
+        'USER': 'jtateCC2',
+        'PASSWORD': 'jack2702',
+        'HOST': 'jtateCC2.mysql.pythonanywhere-services.com',
     }
 }
+
 
 
 # Password validation
