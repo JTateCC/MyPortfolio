@@ -1,22 +1,25 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %} Jack Tate - Full Stack Developer {% endblock title %}
 
 {% block meta_description %}Home Page for Jack Tate Portfolio{% endblock %}
 
 
-{%block content%}
-<head>
-    <h1>Jack Tate - Full Stack Developer</h1>
-</head>
-
+{% block content %}
 <main>
     <div class="grid-container">
-        <div class="light component"></div>
-        <h2>About Me</h2>
-        <p>
-            <span>Here is some about me text</span>
-            <span><img src=""</span>
-        </p>
+        <div class="light grid-item">
+            <h2>From CAD Engineer to Full Stack Developer</h2>
+            <p>I'm on an exciting journey that has taken me from the world of Computer-Aided Design (CAD) to Full Stack Development with a focus on databases and backend development.</p>
+            <p>During my work with CAD tools. I started to recognize the vital role of data management and automation in engineering and manufacturing.</p>
+            <p>This ignited a new passion within me for coding, I started with python and wrote automation scripts before delving into the more complicated world of OOP, Django and Data Science</p>
+            <p>I'm currently honing my skills as a full-stack developer through the School of Code Bootcamp.
+            <p>This intense training focuses on becoming a full stack developer through team based projects, experiencing what an agile dev team is really like</p>
+            <p>This Portfolio showcases my Projects, Applications and Development Blog</p>
+        </div>
+        <div class="light grid-item">
+            <img src="{% static '/img/profile_picture.svg' %}">
+        </div>
     </div>
 </main>
+{% endblock content %}
