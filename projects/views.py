@@ -8,6 +8,8 @@ from projects.models import Project
 
 
 # Create your views here.
+
+# project views
 def all_projects(request):
     # query DB and return all project objects
     projects = Project.objects.all()
@@ -16,7 +18,8 @@ def all_projects(request):
 
 def project_detail(request, pk):
     project = Project.objects.get(pk=pk)
-    return render(request, 'projects/detail.html',
+
+    return render(request, 'projects/project_detail.html',
                   {'project':project})
 
 @csrf_exempt
