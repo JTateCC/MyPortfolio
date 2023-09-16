@@ -27,7 +27,7 @@ SECRET_KEY = ps.django_secret_key
 DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1',
-                 'jtatecc.pythonanywhere.com']
+                 'jtatecc.eu.pythonanywhere.com']
 
 
 # Application definition
