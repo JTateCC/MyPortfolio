@@ -1,11 +1,10 @@
 from django.urls import path
-from projects import views
+from blog import views
 
-app_name = 'projects'
+app_name = 'blog'
 
 urlpatterns = [
-    path('', views.all_projects, name='all_projects'),
-    path('update_server/', views.update_server, name='update'),
-    path('<int:pk>', views.project_detail, name='project_detail')
+    path('', views.all_blogs, name='all_blogs'),
+    path('<int:pk>', views.blog_detail, name='blog_detail')
     ]
 
