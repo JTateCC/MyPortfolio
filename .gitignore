@@ -8,3 +8,4 @@ media
 static
 portfolio/PRIVATE_SETTINGS.py
 /venv/
+/staticfiles/
