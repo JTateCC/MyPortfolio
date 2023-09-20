@@ -1,2 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block title %}Development Blog{% endblock title %}
+
+{% block page-header %}Development Blog{% endblock page-header %}
+
+{% block content %}
+
+<div class="blog-container">
+    {% for b in blogs %}
+        <div class="blog-card">
+            <a href="{% url 'blog:blog_detail' b.pk %}"><h2> {{ b.title }} </h2></a>
+            <p> {{ b.date_created }} </p>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content %}

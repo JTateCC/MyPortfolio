@@ -6,7 +6,7 @@ class BlogPost(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
     date_created = models.DateTimeField(default=datetime.now())
-    image = models.ImageField(upload_to='blog_images')
+    image = models.ImageField(upload_to='static/blog')
 
 
 class BlogComment(models.Model):
