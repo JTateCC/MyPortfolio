@@ -1,0 +1,60 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 75% 25%;;
+    grid-gap: 20px;
+}
+
+.grid-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.grid-item img {
+    max-width: 100%; /* Ensure images don't exceed their container */
+    height: auto;
+}
+
+.light {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 40px;
+}
+
+/* CSS class selector for dark sections */
+.dark {
+    background-color: #333;
+    color: #fff;
+    padding: 40px;
+}
+.contact {
+    text-align: center;
+}
+
+/* Styling for the social icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+/* Styling for the email link */
+.email-link {
+    font-size: 18px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* project styling */
+.card {
+    height: 100%; /* Set a fixed height for all cards */
+    margin-bottom: 20px;
+}
+
+.card-img-top {
+    max-width: 100%; /* Ensure images don't exceed card width */
+    height: auto; /* Maintain aspect ratio for images */
+}
