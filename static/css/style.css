@@ -1,52 +1,129 @@
-.grid-container{
-    display: grid;
-    grid-template-columns: 75% 25%;;
-    grid-gap: 20px;
+/* Custom CSS for Portfolio Page */
+body {
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.9) 50%),
+                url('carbon-fibre.png');
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
-.grid-item {
-    border: 1px solid #ccc;
-    padding: 20px;
+/* Navbar Styling */
+.navbar {
+    background-color: black;
 }
 
-.grid-item img {
-    max-width: 100%; /* Ensure images don't exceed their container */
-    height: auto;
+.navbar-dark .navbar-toggler-icon {
+    background-color: orange;
 }
 
-.light {
-    background-color: #f5f5f5;
-    color: #333;
-    padding: 40px;
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
 }
 
-/* CSS class selector for dark sections */
-.dark {
-    background-color: #333;
-    color: #fff;
-    padding: 40px;
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: orange;
 }
-.contact {
+
+/* Header Styling */
+.home-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.container-item {
     text-align: center;
+    padding: 30px;
+    flex : 1
 }
 
-/* Styling for the social icons */
+/* Profile Picture Frame */
+.profile-frame {
+    width: 300px; /* Adjust the width and height as needed */
+    height: auto;
+    border: 5px solid orange; /* You can change the border color */
+    border-radius: 50%; /* Makes the frame round */
+    overflow: hidden; /* Hides the image overflow outside the frame */
+    margin: 0 auto; /* Centers the frame horizontally */
+}
+
+/* Style for the profile picture */
+.profile-frame img {
+    display: block;
+    width: 100%; /* Ensures the image fills the frame */
+    height: auto;
+    border-radius: 50%; /* Makes the image itself round */
+}
+
+h1 {
+    font-size: 3rem;
+    color: orange;
+    margin: 0;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: orange;
+    margin: 0;
+}
+
+
+/* Button Styling */
+.button a {
+    background-color: orange;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.button a:hover {
+    background-color: black;
+    color: orange;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Social Icons Styling */
 .social-icons {
+    text-align: center;
     margin-top: 20px;
 }
 
 .social-icons a {
     font-size: 24px;
-    margin: 0 15px;
-    text-decoration: none;
+    margin: 10px;
+    color: white;
 }
 
-/* Styling for the email link */
-.email-link {
-    font-size: 18px;
-    margin-top: 20px;
-    text-decoration: none;
+.social-icons a:hover {
+    color: orange;
 }
+
+/* Email Link Styling */
+.email-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email-link:hover {
+    color: white;
+}
+
+
+
+/* css for project grid */
+
 
 /* project styling */
 .card {

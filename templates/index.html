@@ -7,73 +7,37 @@
 
 {% block content %}
 <main>
-    <div class="grid-container">
-        <div class="light grid-item">
-            <h2>From CAD Engineer to Full Stack Developer</h2>
-            <p>I'm on an exciting journey that has taken me from the world of Computer-Aided Design (CAD) to Full Stack Development with a focus on databases and backend development.</p>
-            <p>During my work with CAD tools. I started to recognize the vital role of data management and automation in engineering and manufacturing.</p>
-            <p>This ignited a new passion within me for coding, I started with python and wrote automation scripts before delving into the more complicated world of OOP, Django and Data Science</p>
-            <p>I'm currently honing my skills as a full-stack developer through the School of Code Bootcamp.
-            <p>This intense training focuses on becoming a full stack developer through team based projects, experiencing what an agile dev team is really like</p>
-            <p>This Portfolio showcases my Projects, Applications and Development Blog</p>
-        </div>
-        <div class="light grid-item">
-            <img src="{% static '/img/profile_picture.svg' %}">
-        </div>
-        <div class="dark grid-item">
-            <h2>History as a Product Data Manager</h2>
-                <p>As a former Product Data Manager, I've had the opportunity to work in a dynamic environment where data-driven decision-making is paramount. My skills and experiences include:</p>
-                    <ul>
-                        <li>Scripting and automation to streamline data processes.</li>
-                        <li>Proficiency in Python for data analysis and visualization.</li>
-                        <li>Web development using Django for data-driven applications.</li>
-                        <li>Database management and querying with SQL.</li>
-                    </ul>
-        </div>
-        <div class="dark grid-item">
-            <img src="{% static '/img/backend_picture.svg' %}">
-        </div>
-        <div class="light grid-item">
-            <h2>Projects - A Focus on Engineering</h2>
-            <p> My Projects focus on solutions for the manufacturing and process engineering industry.</p>
-            <p> Explore some of the projects I've created, utilizing a common set of technologies and tools:</p>
-            <ul>
-                <li>Python - Django, Flask, Data Science Libraries(pandas)</li>
-                <li>Javascript - NodeJS, React</li>
-                <li>Database Tech - SQL (MySQl, PostgreSQL), NoSQL (MongoDB)</li>
-            </ul>
-            <p> All my projects are open source on github with youtube videos. Visit the <a href="{% url 'projects:all_projects' %}">Project page</a> for more details</p>
-        </div>
-        <div class="light grid-item">
-            <img src="{% static '/img/project_picture.svg' %}">
-        </div>
-        <div class="dark grid-item">
-            <h2>Development Blog</h2>
-            <p> I share my journey into tech and development over on my <a href="">Blog</a>. </p>
-            <p> You can see progress on my latest projects</p>
-            <p> My Learnings on different languages, modules and frameworks</p>
-            <p> Opinions on tech ... amongst other things</p>
-            <p> Feel free to read and comment</p>
-        </div>
-        <div class="dark grid-item">
-            <img src="{% static '/img/blog_picture.svg' %}">
-        </div>
-         <div class="contact light grid-item">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out to me through the following channels:</p>
 
-            <!-- Social Icons -->
-            <div class="social-icons">
-                <a href="mailto:jtate.cc@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/jack-tate-codes/" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://twitter.com/jack_tate_codes" target="_blank"><i class="fa fa-twitter"></i></a>
+    <div class="home-container">
+        <div class="container-item">
+                <h1>Jack Tate</h1>
+                <h3> Full Stack Developer</h3>
+        </div>
+        <div class="container-item">
+            <div class="profile-frame">
+                <img src="{% static '/img/profile_picture.jpg' %}">
             </div>
-
-            <!-- Email Link -->
-            <a class="email-link" href="mailto:jtate.cc@outlook.com">jtate.cc@outlook.com</a>
-
         </div>
     </div>
+
+    <div class="button container">
+        <span><a id=contact-btn class="btn" href="{% url 'projects:all_projects' %}">Contact Me</a></span>
+        <span><a id=project-btn class="btn" href="{% url 'projects:all_projects' %}">Projects</a></span>
+        <span><a id=blog-btn class="btn" href="{% url 'blog:all_blogs' %}">Blog</a></span>
+    </div>
+
+
+    <!-- Social Icons -->
+    <div class="social-icons">
+        <a href="mailto:jtate.cc@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/jack-tate-codes/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="https://twitter.com/jack_tate_codes" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/JTateCC" target="_blank"><i class="fa fa-github"></i></a>
+    </div>
+
+        <!-- Email Link -->
+        <a class="email-link" href="mailto:jtate.cc@outlook.com">jtate.cc@outlook.com</a>
+
 </main>
 
 

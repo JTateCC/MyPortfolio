@@ -1,4 +1,23 @@
 {% extends 'base.html' %}
 
-
 {% load static %}
+
+{% block title %} {{ blogpost.title }} {% endblock title %}
+
+{% block page-header %} {{ blogpost.title }} {% endblock page-header %}
+
+{% block content %}
+
+    <div class="blog-image" <img src="{% static {{ blogpost.image}}"> </div>
+    <div> {{ blogpost.content }} </div>
+
+<p> date created {{ blogpost.date_created }}</p>
+
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit Comment</button>
+    </form>
+
+{% endblock content %}
