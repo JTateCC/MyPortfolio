@@ -34,12 +34,13 @@ body {
     justify-content: center;
     background-color: black;
     color: white;
+    padding: 200px;
 }
 
 .container-item {
     text-align: center;
     padding: 30px;
-    flex : 1
+    flex : 1;
 }
 
 /* Profile Picture Frame */
@@ -49,7 +50,7 @@ body {
     border: 5px solid orange; /* You can change the border color */
     border-radius: 50%; /* Makes the frame round */
     overflow: hidden; /* Hides the image overflow outside the frame */
-    margin: 0 auto; /* Centers the frame horizontally */
+    margin: 0 auto 20px;
 }
 
 /* Style for the profile picture */
@@ -72,6 +73,9 @@ h3 {
     margin: 0;
 }
 
+.button-all{
+
+}
 
 /* Button Styling */
 .button a {
