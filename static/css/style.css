@@ -130,7 +130,6 @@ footer {
 }
 
 .block-content {
-
     padding: 20px;
 }
 
@@ -221,3 +220,36 @@ footer {
 .project-card a:hover {
     background-color: #FFA500;
 }
+
+/* PROJECT DETAIL STYLING */
+
+.project-detail-content{
+    display: flex;
+    transform: translateZ(0);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    }
+
+.project-info{
+    display: flex;
+    transform: translateZ(0);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.project-about{
+margin-right: 50px;
+margin-left: 0px;
+}
+
+.project-details{
+margin-right: 0px;
+margin-left: 50px;
+}
+
