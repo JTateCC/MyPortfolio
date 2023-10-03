@@ -8,16 +8,24 @@
 
 {% block content %}
 
-    <div class="blog-image" <img src="{% static {{ blogpost.image}}"> </div>
-    <div> {{ blogpost.content }} </div>
+<div class="home-container">
+    <div class="blog-content container">
+        <div class="blog-image">
+            <img src="{% static blogpost.image %}">
+        </div>
+        <div class="blog-content">
+            {{ blogpost.content }}
+        </div>
 
-<p> date created {{ blogpost.date_created }}</p>
+        <p>Date Created: {{ blogpost.date_created }}</p>
+    </div>
 
-
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit Comment</button>
-    </form>
-
+    <div class="comment-form container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit Comment</button>
+        </form>
+    </div>
+</div>
 {% endblock content %}

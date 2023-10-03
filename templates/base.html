@@ -3,47 +3,70 @@
 
 {% load static %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=max-width, initial-scale=1.0">
-    <meta name="description" content="{% block meta_description %}{% endblock %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <title>{% block title %}Base Title{% endblock title %}</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Jack Tate</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'projects:all_projects' %}">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-    <h1>{% block page-header %}{% endblock page-header %}</h1>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=max-width, initial-scale=1.0">
+        <meta name="description" content="{% block meta_description %}{% endblock %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>{% block title %}Base Title{% endblock title %}</title>
+    </head>
+    <body>
+        <div class="top-level">
+            <div class="main-container">
+                <header>
+                    <div class="navigation">
+                        <nav class="navbar navbar-expand-lg navbar-dark">
+                            <a class="navbar-brand" href="#"><img src="static/img/5NNCD8-LogoMakr.png" height="50px" opacity="0"></a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'projects:all_projects' %}">Projects</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </nav>
+                    </div>
+                    <!-- Social Icons and Email -->
+                    <div class="social-icons">
+                        <a href="mailto:jtate.cc@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/jack-tate-codes/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://twitter.com/jack_tate_codes" target="_blank"><i class="fa fa-twitter"></i></a>
+                        <a href="https://github.com/JTateCC" target="_blank"><i class="fa fa-github"></i></a>
+                    </div>
+
+                </header>
+
+                <div class="spacer horizontal"></div>
 
 
+                <div class="block-content">
+                    {% block content %}
 
-{% block content %}
+                    {% endblock content %}
 
-{% endblock content %}
+                </div>
+                <footer>©2023 jtatecc.eu.pythonanywhere.com/</footer>
+            </div>
 
-</body>
+        </div>
+
+    </body>
 </html>
+

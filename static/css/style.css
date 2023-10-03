@@ -1,20 +1,91 @@
 /* Custom CSS for Portfolio Page */
-body {
-    background: linear-gradient(30deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%),
-                url('carbon-fibre.png');
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: white;
-    font-family: Arial, sans-serif;
+:root {
+    --grad-1: rgb(218,104,15);
+    --grad-2: rgb(192,192,192);
 }
+/* BASE STYLING */
+body {
+    color: #d1d1d1;
+    background: #1d1d20;
+    font-family: 'Montserrat';
+    opacity: 1.0
+}
+
+.top-level {
+    box-sizing: border-box;
+    transition: opacity .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Full viewport height */
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    padding: 10px;
+    /* Other styles */
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: centre;
+    box-sizing: border-box;
+    max-width: 1280px;
+    width: 100vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    border: 10px solid transparent;
+    border-image: linear-gradient(45deg, var(--grad-1), var(--grad-2)) 1;
+    border-image-slice: 1;
+    padding: 50px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Make the header stretch the full width */
+}
+
+.navigation {
+    flex: 1; /* Allow the navigation to grow and take available space */
+}
+
+
+.spacer {
+    background-image: linear-gradient(var(--grad-1), var(--grad-2));
+    z-index: 1;
+    padding: 1px;
+    margin: 5px;
+
+}
+
+.spacer.horizontal {
+    height: 2px; /* Adjust the height as needed for horizontal line */
+    width: 100%; /* Horizontal line width */
+    }
+
+.spacer.vertical {
+    width: 2px; /* Adjust the width as needed for vertical line */
+    height: 100%; /* Vertical line height */
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px ;
+}
+
 
 /* Navbar Styling */
 .navbar {
-    background-color: black;
+    background-color: #1d1d20;
 }
 
 .navbar-dark .navbar-toggler-icon {
-    background-color: orange;
+    background-color: white;
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -22,144 +93,89 @@ body {
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: orange;
-}
-
-/* Header Styling */
-.home-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
-    padding: 200px;
 }
 
-.container-item {
-    text-align: center;
-    padding: 30px;
-    flex : 1;
-}
-
-/* Profile Picture Frame */
-.profile-frame {
-    width: 300px; /* Adjust the width and height as needed */
-    height: auto;
-    border: 5px solid orange; /* You can change the border color */
-    border-radius: 50%; /* Makes the frame round */
-    overflow: hidden; /* Hides the image overflow outside the frame */
-    margin: 0 auto 20px;
-}
-
-/* Style for the profile picture */
-.profile-frame img {
-    display: block;
-    width: 100%; /* Ensures the image fills the frame */
-    height: auto;
-    border-radius: 50%; /* Makes the image itself round */
-}
-
-h1 {
-    font-size: 3rem;
-    color: orange;
-    margin: 0;
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: orange;
-    margin: 0;
-}
-
-.button-all{
-
-}
-
-/* Button Styling */
-.button a {
-    background-color: orange;
-    color: black;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 10px;
-    font-weight: bold;
-}
-
-.button a:hover {
-    background-color: black;
-    color: orange;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Social Icons Styling */
+/* SOCIAL ICON STYLING */
 .social-icons {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.social-icons a {
-    font-size: 24px;
-    margin: 10px;
+    display:flex;
+    width:25%;
+    justify-content:space-between;
     color: white;
 }
 
-.social-icons a:hover {
-    color: orange;
+.social-icons a i {
+    color: white;
 }
 
-/* Email Link Styling */
-.email-link {
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    color: orange;
+
+
+/* BUTTON STYLING */
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff; =
     text-decoration: none;
-    font-weight: bold;
-}
-
-.email-link:hover {
-    color: white;
-}
-
-
-/* CSS for the About Me Pop-up */
-#about-me-div {
-
-    align-items: center;
-    justify-content: center;
-    display: none;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px;
+    border: 2px solid #FFA500;
     border-radius: 5px;
-    width: 80%;
-    left: 10%;
-    bottom: -100%; /* Initially hide it below the buttons */
-    transition: bottom 0.3s ease;
-    padding: 20px
-    height: auto;
+    transition: background-color 0.3s ease-in-out;
+    font-size: 16px;
+    margin-right: 10px; =
+    width: 150px; =
 }
 
-/* Style the paragraph text as needed */
-.#about-me-div p {
-    text-color: orange;
-    margin: 0;
+.btn:hover {
+    background-color: #FF6600; =
+}
+
+.block-content {
+
+    padding: 20px;
 }
 
 
+/* INDEX HTML STYLING */
 
-/* css for project grid */
+.main-content {
+    display: flex;
+    transform: translateZ(0);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    }
 
+.overview-container{
+    position: relative;
+    flex-basis: 50%;
+    display: block;
+    z-index: 2;
 
-/* project styling */
-.card {
-    height: 100%; /* Set a fixed height for all cards */
-    margin-bottom: 20px;
 }
 
-.card-img-top {
-    max-width: 100%; /* Ensure images don't exceed card width */
-    height: auto; /* Maintain aspect ratio for images */
+.button-container{
+    flex-basis: 30.9017%;
+    z-index: 2;
+    background: #1d1d20;
+    border-top-left-radius: 7px;
+    flex-direction: column;
+    padding: 30px 30px 50px 50px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    height: 50%;
+    }
+
+.overview-message{
+    transform-origin: 0;
+    opacity: 1;
+    transition: all .2s linear;
+    transform: scaleX(1);
+    flex: 1
+
+
+
 }
+
+
