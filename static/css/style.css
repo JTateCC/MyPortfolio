@@ -298,21 +298,74 @@ margin-left: 50px;
 /* BLOG-DETAIL STYLING */
 
 .blog-detail-content{
-    display:flex;
-    flex-direction: column;
-    width:100%;
-    height:100%;
-    justify-content:space-between;
+    height: 60vh;
+}
 
+.blog-detail-grid{
+    display: grid;
+    grid-template-columns: 49% 2% 49%;
+    grid-template-rows: 10% 2% 43% 2% 43%;
+    gap: 10px;
+    height: 100%; /* Set the height to 100% of the viewport height */
+}
 
+.blog-header-info{
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.g1{
+  grid-column-start: 1;
+  grid-column-end: span 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.blog-detail-info{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.g2{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 6;
 }
 
 .comment-form{
-    height:20%;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
 }
+
+.g3 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+
+
+.comment-container {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 5;
+  grid-row-end: 6;
+width:100%;
+max-height:500px;
+overflow:scroll;
+}
+
+
 /* CSS for form groups (label + input) */
 .comment-form p{
-    margin-bottom: 15px; /* Adjust the margin as needed for spacing between groups */
+    margin-bottom: 1px; /* Adjust the margin as needed for spacing between groups */
 }
 
 /* CSS for form labels */
@@ -329,10 +382,5 @@ margin-left: 50px;
     padding: 5px; /* Adjust padding as needed */
 }
 
-.comment-container {
-display:flex;
-flex-direction: column;
-width:100%;
-height:10%;
-max-height:500px;
+
 }

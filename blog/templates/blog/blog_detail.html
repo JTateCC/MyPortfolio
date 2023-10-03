@@ -9,48 +9,52 @@
 {% block content %}
 
 <div class="blog-detail-content">
-    <div class="blog-main">
-        <div class="blog-header-info">
-        <h2> {{ blogpost.title }} </h2>
-        <p> {{ blogpost.date_created }} </p>
+    <div class="blog-detail-grid">
+
+            <div class="blog-header-info">
+            <h2> {{ blogpost.title }} </h2>
+            <p> {{ blogpost.date_created }} </p>
+            </div>
+
+            <div class="spacer horizontal g1"></div>
+
+            <div class="blog-detail-info">
+                <div class="blog-image">
+                    <img src="{% static blogpost.image %}">
+                </div>
+                <div class="blog-text-content">
+                    {{ blogpost.content }}
+                </div>
+            </div>
+
+
+        <div class="spacer vertical grid-item g2"></div>
+
+        <div class="comment-form grid-item">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class=btn type="submit">Submit Comment</button>
+            </form>
         </div>
-        <div class="spacer horizontal"></div>
-        <div class="blog-detail-info">
-            <div class="blog-image">
-                <img src="{% static blogpost.image %}">
+
+        <div class="spacer horizontal grid-item g3"></div>
+
+        <div class="comment-container grid-item">
+            <h3>Comments</h3>
+            {% for c in comments %}
+            <div class="comment-section">
+                <div class="comment-content">
+                    <p>{{ c.content }}</p>
+                </div>
+                <div class="comment-info">
+                    <p>{{ c.created_by }}</p>
+                    <p>{{ c.post_date }}</p>
+                </div>
             </div>
-            <div class="blog-text-content">
-                {{ blogpost.content }}
-            </div>
+            <div class="spacer horizontal"></div>
+            {% endfor %}
         </div>
-    </div>
-
-    <div class="spacer horizontal"></div>
-
-    <div class="comment-form">
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class=btn type="submit">Submit Comment</button>
-        </form>
-    </div>
-
-    <div class="spacer horizontal"></div>
-
-    <div class="comment-container">
-        <h3>Comments</h3>
-        {% for c in comments %}
-        <div class="comment-section">
-            <div class="comment-content">
-                <p>{{ c.content }}</p>
-            </div>
-            <div class="comment-info">
-                <p>{{ c.created_by }}</p>
-                <p>{{ c.post_date }}</p>
-            </div>
-        </div>
-        <div class="spacer horizontal"></div>
-        {% endfor %}
     </div>
 </div>
 {% endblock content %}
