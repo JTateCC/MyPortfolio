@@ -179,3 +179,45 @@ footer {
 }
 
 
+/* PROJECT STYLINg */
+
+
+/* Style the container for projects */
+.project-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column size as needed */
+    gap: 20px; /* Adjust gap size between grid items */
+    }
+
+/* Style individual project cards */
+.project-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    width: 300px; /* Set a fixed width for the card */
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Set a fixed maximum height for the image */
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+}
+
+.project-card a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    background-color: #FF6600;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.project-card a:hover {
+    background-color: #FFA500;
+}

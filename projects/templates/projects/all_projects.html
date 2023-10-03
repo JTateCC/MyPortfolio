@@ -3,19 +3,17 @@
 
 {% block content %}
 
-<div class="container">
+<div class="project-content">
     <h1>Projects</h1>
     <div class="row">
     {% for project in projects %}
-        <div class="col-md-4">
-            <div class="card mb-2">
-                <img class="card-img-top" src="{% static project.image %}" alt="image of te project">
-                <div class="card-body">
-                    <h5 class="card-title">{{ project.title }}</h5>
-                    <a href="{% url 'projects:project_detail' project.pk %}" class="btn btn-primary">Read More</a>
-                </div>
-            </div>
+        <div class="project-card">
+            <img class="project-image" src="{% static project.image %}" alt="{{ project.title }}">
+            <h3>{{ project.title }}</h3>
+            <a class="project-link" href="{% url 'projects:project_detail' pk=project.id %}">View Details</a>
         </div>
+
+
     {% endfor %}
     </div>
 </div>
