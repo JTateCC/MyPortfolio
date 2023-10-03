@@ -7,13 +7,21 @@
 
 {% block content %}
 
-<div class="blog-container">
-    {% for b in blogs %}
-        <div class="blog-card">
-            <a href="{% url 'blog:blog_detail' b.pk %}"><h2> {{ b.title }} </h2></a>
-            <p> {{ b.date_created }} </p>
-        </div>
-    {% endfor %}
-</div>
+    <div class="blog-content">
+        <h1>Development Blog</h1>
+        <div class="blog-grid-container">
+            {% for b in blogs %}
+            <div class="blog-card">
+                <div class="blog-title-all">
+                    <a href="{% url 'blog:blog_detail' b.pk %}"><h3 class="blog-title"> {{ b.title }} </h3></a>
+                </div>
+                <div class="blog-date-all">
+                    <p class="blog-date"> {{ b.date_created }} </p>
+                </div>
+            </div>
+            {% endfor %}
 
+        </div>
+    </div>
 {% endblock content %}
+

@@ -12,6 +12,7 @@ def all_blogs(request):
 def blog_detail(request, pk):
     blogpost = BlogPost.objects.get(pk=pk)
     comments = BlogComment.objects.filter(blog_post=blogpost)
+    print(comments)
 
     if request.method == 'POST':
         form = BlogSubmitForm(request.POST)
@@ -23,5 +24,5 @@ def blog_detail(request, pk):
         form = BlogSubmitForm()
 
     return render(request, 'blog/blog_detail.html', {'blogpost': blogpost,
-                                                     'form' : form,
-                                                     'comments' : comments})
+                                                     'form': form,
+                                                     'comments': comments})

@@ -9,6 +9,7 @@ body {
     background: #1d1d20;
     font-family: 'Montserrat';
     opacity: 1.0
+
 }
 
 .top-level {
@@ -20,6 +21,7 @@ body {
     justify-content: center; /* Horizontal centering */
     align-items: center; /* Vertical centering */
     padding: 10px;
+    overflow: auto;
     /* Other styles */
 }
 
@@ -34,7 +36,6 @@ body {
     margin-top: 0;
     margin-bottom: 0;
     align-items: center;
-    overflow: hidden;
     position: relative;
     border: 10px solid transparent;
     border-image: linear-gradient(45deg, var(--grad-1), var(--grad-2)) 1;
@@ -253,3 +254,85 @@ margin-right: 0px;
 margin-left: 50px;
 }
 
+
+
+/* ALL BLOGS STYLING */
+
+.blog-content{
+    height: 60vh;
+}
+
+.blog-grid-container{
+    display: grid;
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-columns: 100%;
+    gap: 20px;
+    height: 100%; /* Set the height to 100% of the viewport height */
+    }
+
+
+.blog-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #ccc;
+    padding: 5px; /* Increase the padding for more height */
+    margin: 5px auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    }
+
+
+
+/* CSS for the blog title */
+.blog-title {
+    margin: 0 50px; /* Remove default margin for h3 */
+}
+
+/* CSS for the blog date */
+.blog-date {
+    margin: 0 50px; /* Remove default margin for p */
+    color: #777;
+}
+
+/* BLOG-DETAIL STYLING */
+
+.blog-detail-content{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    justify-content:space-between;
+
+
+}
+
+.comment-form{
+    height:20%;
+}
+/* CSS for form groups (label + input) */
+.comment-form p{
+    margin-bottom: 15px; /* Adjust the margin as needed for spacing between groups */
+}
+
+/* CSS for form labels */
+.comment-form p label {
+    display: block; /* Display labels as block elements to stack them on top of inputs */
+    font-weight: bold; /* Optionally, make labels bold */
+    margin-bottom: 5px; /* Adjust the margin as needed for spacing between label and input */
+}
+
+/* CSS for form input elements (assuming "comment" is a text input) */
+.comment-form p input{
+    /* Add your existing styles for text input elements here */
+    width: 100%; /* Ensure the input takes up the full width of the container */
+    padding: 5px; /* Adjust padding as needed */
+}
+
+.comment-container {
+display:flex;
+flex-direction: column;
+width:100%;
+height:10%;
+max-height:500px;
+}
