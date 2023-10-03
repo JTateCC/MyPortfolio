@@ -9,31 +9,49 @@
 <main>
 
     <div class="home-container">
+
         <div class="container-item button-all">
                 <h1>Jack Tate</h1>
                 <h3> Full Stack Developer</h3>
                 <div class="button container">
-                    <span><a id=contact-btn class="btn" href="{% url 'projects:all_projects' %}">About Me</a></span>
+                    <span><a id=contact-btn class="btn" >About Me</a></span>
                     <span><a id=project-btn class="btn" href="{% url 'projects:all_projects' %}">Projects</a></span>
                     <span><a id=blog-btn class="btn" href="{% url 'blog:all_blogs' %}">Blog</a></span>
-                <div class="social-icons">
+                </div>
+                <div class="social-icons container button">
                     <a href="mailto:jtate.cc@outlook.com" target="_blank"><i class="fa fa-envelope"></i></a>
                     <a href="https://www.linkedin.com/in/jack-tate-codes/" target="_blank"><i class="fa fa-linkedin"></i></a>
                     <a href="https://twitter.com/jack_tate_codes" target="_blank"><i class="fa fa-twitter"></i></a>
                     <a href="https://github.com/JTateCC" target="_blank"><i class="fa fa-github"></i></a>
                 </div>
 
-    </div>
         </div>
+
         <div class="container-item">
             <div class="profile-frame">
                 <img src="{% static '/img/profile_picture.jpg' %}">
             </div>
         </div>
+
     </div>
 
-
+    <div id="about-me-div">
+           <div id="about-text">
+                <p>
+                    A Full Stack Developer with a passion for creating robust and efficient web applications and software. My journey into the world of programming began as a database manager, where I honed my skills in SQL and data management.
+                    Over time, I transitioned into the exciting realm of full-stack development, and I haven't looked back since.
+                </p>
+                <p>
+                    My primary interests lie in building powerful back-end systems and leveraging the potential of Python for a wide range of applications.
+                    I believe in the importance of clean code, scalability, and continuously learning and adapting to the ever-evolving technology landscape.
+                </p>
+               <p>
+                    Whether it's designing intuitive user interfaces, optimizing database queries, or architecting server-side solutions,
+                   I'm dedicated to delivering high-quality, efficient, and secure software that meets the needs of users and businesses alike. Let's collaborate and turn your ideas into reality.
+               </p>
+           </div>
+    </div>
+    <script src="/static/js/main.js"></script>
 </main>
-
 
 {% endblock content %}

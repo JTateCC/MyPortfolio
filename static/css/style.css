@@ -1,10 +1,9 @@
 /* Custom CSS for Portfolio Page */
 body {
-    background: linear-gradient(45deg, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.9) 50%),
+    background: linear-gradient(30deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.9) 100%),
                 url('carbon-fibre.png');
     background-size: cover;
-    background-blend-mode: overlay;
-    background-color: black;
+    background-blend-mode: multiply;
     color: white;
     font-family: Arial, sans-serif;
 }
@@ -32,7 +31,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
     color: white;
     padding: 200px;
 }
@@ -122,6 +120,32 @@ h3 {
 
 .email-link:hover {
     color: white;
+}
+
+
+/* CSS for the About Me Pop-up */
+#about-me-div {
+
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    left: 10%;
+    bottom: -100%; /* Initially hide it below the buttons */
+    transition: bottom 0.3s ease;
+    padding: 20px
+    height: auto;
+}
+
+/* Style the paragraph text as needed */
+.#about-me-div p {
+    text-color: orange;
+    margin: 0;
 }
 
 
